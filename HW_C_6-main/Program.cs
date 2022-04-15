@@ -1,5 +1,6 @@
 ﻿
 //Seminar#6
+/*
 // Задача №1
 // Условие: Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
 
@@ -153,7 +154,7 @@
 //     }
 //     Console.WriteLine();
 // }    
-
+*/
 
 // Домашняя работа №6
 // Задача №1
@@ -196,3 +197,28 @@
 // 1 1 1 1
 // 1 0 0 1
 // 1 1 1 1
+
+void FrameArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (i == 0
+                || i == array.GetLength(0) - 1
+                || j == 0
+                || j == array.GetLength(1) - 1)
+                array[i, j] = 1;
+            else array[i, j] = 0;
+            Console.Write($"{array[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+Console.Write("Укажите количество строк: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Укажите количество столбцов: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+int[,] userArray = new int[rows, columns];
+FrameArray(userArray);
