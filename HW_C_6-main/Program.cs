@@ -169,8 +169,7 @@
 //     for (int i = 0; i <= count - 1; i++)
 //     {
 //         Console.WriteLine($"Введите {i + 1}-е число из {count}");
-//         int num = Convert.ToInt32(Console.ReadLine());
-//         array[i] = num;
+//         array[i] = Convert.ToInt32(Console.ReadLine());//         
 //     }
 //     Console.WriteLine();
 //     foreach (int item in array)
